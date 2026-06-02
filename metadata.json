@@ -1,0 +1,6 @@
+{
+  "name": "Project Neverland",
+  "description": "Sleek professional portfolio and digital consultancy platform featuring an interactive 3D project carousel, comprehensive services showcase, and seamless consultation booking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
