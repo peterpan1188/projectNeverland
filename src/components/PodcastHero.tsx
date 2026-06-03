@@ -11,7 +11,7 @@ interface PodcastHeroProps {
 
 export default function PodcastHero({ onOpenBooking, onExploreServices }: PodcastHeroProps) {
   return (
-    <section className="relative bg-[#070709] bg-radial-gradient py-20 md:py-28 overflow-hidden border-b border-zinc-900">
+    <section className="relative bg-[#070709] bg-radial-gradient py-12 md:py-20 overflow-hidden border-b border-zinc-900">
       
       {/* Dynamic Background Blob elements matching the peg */}
       {/* Green blob - top left */}
@@ -69,8 +69,8 @@ export default function PodcastHero({ onOpenBooking, onExploreServices }: Podcas
 
         {/* Title text crafted to exactly replicate Dribbble peg layout but fully customized for Project Neverland */}
         <h1 className="text-3xl sm:text-5xl md:text-6xl font-display font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-[1.12] mb-8">
-          Build a stunning digital platform with speed <br className="hidden sm:inline" />
-          using the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFAA2B] via-[#FF8A00] to-rose-500 font-extrabold shadow-sm">Neverland</span> framework
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFAA2B] via-[#FF8A00] to-rose-500 font-extrabold shadow-sm">Peter Buenavente</span> <br className="hidden sm:inline" />
+          Premium Digital Strategy
         </h1>
 
         {/* Pill call-to-actions */}
@@ -104,52 +104,39 @@ export default function PodcastHero({ onOpenBooking, onExploreServices }: Podcas
           {/* Desktop Asymmetric Bento Column Grid Container */}
           <div className="hidden md:grid grid-cols-12 gap-4 items-stretch">
             
-            {/* Card 1: Smartphone display of app dashboard (Col span 2) */}
+            {/* Card 1: iKalinga - Pet Rescue & Animal Welfare (Col span 2) */}
             <div className="col-span-2 relative group overflow-hidden rounded-2xl border border-white/5 bg-[#121217] h-[290px] self-end transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-[#FFAA2B]/30">
               <img
-                src="https://images.unsplash.com/photo-1546054454-aa26e2b734c7?q=80&w=600&auto=format&fit=crop"
-                alt="High-Performance mobile dashboard preview"
+                src="https://ikalinga.vercel.app/assets/pngtree-diverse-group-of-adorable-pets-including-cats-and-dogs-sitting-together-png-image_20011460-ynrrH6xA.png"
+                alt="iKalinga Pet Rescue & Animal Welfare Platform"
                 className="w-full h-full object-cover opacity-85 group-hover:scale-110 transition-transform duration-700"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent flex flex-col justify-end p-4 text-left">
-                <span className="text-[10px] uppercase font-mono tracking-widest text-[#10B981] font-semibold mb-1">Tailwind CSS v4</span>
-                <h4 className="text-xs font-bold text-white">Interactive Products</h4>
-              </div>
             </div>
 
-            {/* Column 2: Stack of two widescreen media items (Col span 3) */}
+            {/* Column 2: Stack of two MVP showcase items (Col span 3) */}
             <div className="col-span-3 flex flex-col gap-4">
-              {/* Card top: Live DJ crowd */}
+              {/* Card top: Asan Kana - Family Location Tracking */}
               <div className="relative group overflow-hidden rounded-2xl border border-white/5 bg-[#121217] h-[137px] transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:border-indigo-500/30">
                 <img
-                  src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=600&auto=format&fit=crop"
-                  alt="Launch strategy meeting"
+                  src="https://asan-kana.vercel.app/assets/asankana_map_right_facing_1780165869301-Dvs0g0ud.png"
+                  alt="Asan Kana Real-Time Location Tracking Interface"
                   className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/8 w-full h-full" />
-                <div className="absolute bottom-3 left-3 flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-                  <span className="text-[9px] uppercase font-mono font-bold text-zinc-300">+240% Speed Index</span>
-                </div>
               </div>
-              {/* Card bottom: Professional sound booth mics array */}
+              {/* Card bottom: Travel Tayo - Island Tourism */}
               <div className="relative group overflow-hidden rounded-2xl border border-white/5 bg-[#121217] h-[137px] transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:border-rose-500/30">
                 <img
-                  src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=600&auto=format&fit=crop"
-                  alt="Premium audio acoustics"
+                  src="https://travel-tayo.vercel.app/src/assets/images/philippines_hero_banner_1780169463628.png"
+                  alt="Travel Tayo Philippine Island Tourism"
                   className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute bottom-3 left-3 text-left">
-                  <span className="text-[10px] font-mono text-zinc-400">Launch Framework</span>
-                  <h4 className="text-xs font-bold text-white">Dynamic Brand Direction</h4>
-                </div>
               </div>
             </div>
 
-            {/* Column 3: The Golden Center Hero Portrait with white headphones (Col span 3) */}
+            {/* Column 3: The Golden Center Hero Portrait (Col span 3) */}
             <div className="col-span-3 relative group overflow-hidden rounded-3xl border-2 border-[#FFAA2B]/40 bg-[#FFAA2B] h-[340px] shadow-[0_0_40px_rgba(255,170,43,0.25)] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_55px_rgba(255,170,43,0.35)]">
               {/* Gold/Orange styled studio lighting mesh inside layout */}
               <div className="absolute inset-0 bg-gradient-to-b from-[#FFAA2B] via-amber-400 to-[#FF8A00] opacity-80" />
@@ -159,39 +146,31 @@ export default function PodcastHero({ onOpenBooking, onExploreServices }: Podcas
                 className="w-full h-full object-cover relative z-10 mix-blend-luminosity group-hover:scale-105 transition-transform duration-700 group-hover:mix-blend-normal"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1F1200] via-transparent to-transparent z-20 flex flex-col justify-end p-5 text-left">
-                <span className="text-[10px] uppercase font-mono tracking-widest text-amber-300 font-bold mb-1">Principal Architect</span>
-                <h3 className="text-base font-extrabold text-white leading-tight">Neverland Studio</h3>
-                <p className="text-[11px] text-amber-200/90 font-sans font-light mt-0.5">Specialized Advisory Partners</p>
-              </div>
             </div>
 
-            {/* Column 4: Stack of two widescreen media items (Col span 2) */}
+            {/* Column 4: Stack of two MVP showcase items (Col span 2) */}
             <div className="col-span-2 flex flex-col gap-4">
-              {/* Card top: Flashing Neon Synthesizer board */}
+              {/* Card top: Ka Barangay - Community Governance */}
               <div className="relative group overflow-hidden rounded-2xl border border-white/5 bg-[#121217] h-[137px] transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:border-emerald-500/30">
                 <img
-                  src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=600&auto=format&fit=crop"
-                  alt="Tactile interface controls"
+                  src="https://ka-barangay-io.vercel.app/src/assets/images/kabarangay_hero_1780140636347.png"
+                  alt="Ka Barangay Community Governance Platform"
                   className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />
               </div>
-              {/* Card bottom: Professional Headphones product shot on soft Blue theme */}
-              <div className="relative group overflow-hidden rounded-2xl border border-[#141d2d] bg-gradient-to-br from-cyan-900 to-indigo-950 h-[137px] transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-500/30">
+              {/* Card bottom: SpeakUp - Anti-Bullying Support */}
+              <div className="relative group overflow-hidden rounded-2xl border border-[#141d2d] bg-gradient-to-br from-indigo-900 to-purple-950 h-[137px] transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:border-indigo-500/30">
                 <img
-                  src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=600&auto=format&fit=crop"
-                  alt="Product details asset"
+                  src="https://images.unsplash.com/photo-1516627145497-ae3ddd112c38?q=80&w=600&auto=format&fit=crop"
+                  alt="SpeakUp Anti-Bullying Safety Platform"
                   className="w-full h-full object-cover opacity-75 group-hover:scale-110 transition-transform duration-700 mix-blend-overlay"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Layers className="w-8 h-8 text-cyan-200/40 group-hover:scale-125 transition-transform duration-500" />
-                </div>
               </div>
             </div>
 
-            {/* Card 5: Host giving thumbs up (Col span 2) */}
+            {/* Card 5: Right showcase (Col span 2) */}
             <div className="col-span-2 relative group overflow-hidden rounded-2xl border border-white/5 bg-[#121217] h-[290px] self-end transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-[#FFAA2B]/30">
               <img
                 src="https://images.unsplash.com/photo-1516280440614-37939bbacd6a?q=80&w=600&auto=format&fit=crop"
@@ -199,10 +178,6 @@ export default function PodcastHero({ onOpenBooking, onExploreServices }: Podcas
                 className="w-full h-full object-cover opacity-85 group-hover:scale-110 transition-transform duration-700"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-transparent flex flex-col justify-end p-4 text-left">
-                <span className="text-[10px] uppercase font-mono tracking-widest text-[#3B82F6] font-semibold mb-1">Elite Engineering</span>
-                <h4 className="text-xs font-bold text-white">Full-Stack Scale Setup</h4>
-              </div>
             </div>
 
           </div>
