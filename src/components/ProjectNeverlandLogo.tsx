@@ -1,4 +1,5 @@
 import React from 'react';
+import logoSrc from '../assets/images/pn logov2.png';
 
 interface ProjectNeverlandLogoProps {
   className?: string; // Standard className to control height/style
@@ -13,7 +14,7 @@ export default function ProjectNeverlandLogo({
   // Utilizing the uploaded PNG asset directly for the logo image
   return (
     <img
-      src="/src/assets/images/pn logov2.png"
+      src={logoSrc}
       alt="Project Neverland"
       className={`${className} object-contain`}
       id="project-neverland-logo-image"

@@ -12,13 +12,12 @@ import {
   ChevronRight, 
   Copy
 } from 'lucide-react';
+import peterPhoto from '../assets/images/peterbuenavente-featured-1.png';
 
 export default function InteractivePlatformSection() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<'experience' | 'skills' | 'contact'>('experience');
   const [copiedText, setCopiedText] = useState<string | null>(null);
-
-  const peterPhoto = '/src/assets/images/peterbuenavente-featured-1.png';
 
   const handleCopy = (text: string, type: string) => {
     navigator.clipboard.writeText(text);
