@@ -119,21 +119,10 @@ export default function InteractivePlatformSection() {
         {/* RIGHT COLUMN: Stark Swiss narrative bio with interactive indicators */}
         <div className="lg:col-span-7 text-left flex flex-col justify-center">
           
-          {/* Profile Tag */}
-          <div className="mb-4">
-            <span className="text-[10px] font-mono text-zinc-400 tracking-widest uppercase font-bold">
-              Project Team Lead & UI/UX Lead
-            </span>
-          </div>
-
-          {/* Stark Switzerland Typography Heading */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold tracking-tight text-white mb-3 leading-[1.12]">
-            Meet Peter Buenavente
+          {/* Main heading */}
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold tracking-tight text-white mb-6 leading-[1.12]">
+            Meet Peter, our Project Lead, Senior Dev and Design Lead
           </h2>
-          
-          <h3 className="text-lg sm:text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-[#FFAA2B] to-[#FF5A1F] mb-6 leading-none">
-            The Project Lead, Senior Developer and the Design Lead
-          </h3>
 
           {/* Engaging narrative description with absolute typography precision */}
           <div className="space-y-4 text-zinc-400 text-sm sm:text-base font-sans font-light leading-relaxed mb-6">

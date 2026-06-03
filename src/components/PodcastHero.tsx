@@ -1,6 +1,13 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Sparkles, Play, ArrowRight, Layers, Cpu, Code, ArrowUpRight } from 'lucide-react';
+import iKalingaImg from '../assets/images/neverland_creative_1779377777570.png';
+import asanKanaImg from '../assets/images/red_silhouette_1779378744158.png';
+import travelTayoImg from '../assets/images/orange_juice_1779378764645.png';
+import kaBarangayImg from '../assets/images/neverland_interface_1779377759860.png';
+import speakUpImg from '../assets/images/streetwear_blossoms_1779378828213.png';
+import productDevImg from '../assets/images/hoodie_model_1779378723764.png';
+import designArchitectImg from '../assets/images/peterbuenavente-featured-1.png';
 
 interface PodcastHeroProps {
   onOpenBooking: () => void;
@@ -107,8 +114,8 @@ export default function PodcastHero({ onOpenBooking, onExploreServices }: Podcas
             {/* Card 1: iKalinga - Pet Rescue & Animal Welfare (Col span 2) */}
             <div className="col-span-2 relative group overflow-hidden rounded-2xl border border-white/5 bg-[#121217] h-[290px] self-end transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-[#FFAA2B]/30">
               <img
-                src="https://ikalinga.vercel.app/assets/pngtree-diverse-group-of-adorable-pets-including-cats-and-dogs-sitting-together-png-image_20011460-ynrrH6xA.png"
-                alt="iKalinga Pet Rescue & Animal Welfare Platform"
+                src={iKalingaImg}
+                alt=""
                 className="w-full h-full object-cover opacity-85 group-hover:scale-110 transition-transform duration-700"
                 referrerPolicy="no-referrer"
               />
@@ -119,8 +126,8 @@ export default function PodcastHero({ onOpenBooking, onExploreServices }: Podcas
               {/* Card top: Asan Kana - Family Location Tracking */}
               <div className="relative group overflow-hidden rounded-2xl border border-white/5 bg-[#121217] h-[137px] transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:border-indigo-500/30">
                 <img
-                  src="https://asan-kana.vercel.app/assets/asankana_map_right_facing_1780165869301-Dvs0g0ud.png"
-                  alt="Asan Kana Real-Time Location Tracking Interface"
+                  src={asanKanaImg}
+                  alt=""
                   className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />
@@ -128,8 +135,8 @@ export default function PodcastHero({ onOpenBooking, onExploreServices }: Podcas
               {/* Card bottom: Travel Tayo - Island Tourism */}
               <div className="relative group overflow-hidden rounded-2xl border border-white/5 bg-[#121217] h-[137px] transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:border-rose-500/30">
                 <img
-                  src="https://travel-tayo.vercel.app/src/assets/images/philippines_hero_banner_1780169463628.png"
-                  alt="Travel Tayo Philippine Island Tourism"
+                  src={travelTayoImg}
+                  alt=""
                   className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />
@@ -141,8 +148,8 @@ export default function PodcastHero({ onOpenBooking, onExploreServices }: Podcas
               {/* Gold/Orange styled studio lighting mesh inside layout */}
               <div className="absolute inset-0 bg-gradient-to-b from-[#FFAA2B] via-amber-400 to-[#FF8A00] opacity-80" />
               <img
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop"
-                alt="Principal Design Architect"
+                src={designArchitectImg}
+                alt=""
                 className="w-full h-full object-cover relative z-10 mix-blend-luminosity group-hover:scale-105 transition-transform duration-700 group-hover:mix-blend-normal"
                 referrerPolicy="no-referrer"
               />
@@ -153,8 +160,8 @@ export default function PodcastHero({ onOpenBooking, onExploreServices }: Podcas
               {/* Card top: Ka Barangay - Community Governance */}
               <div className="relative group overflow-hidden rounded-2xl border border-white/5 bg-[#121217] h-[137px] transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:border-emerald-500/30">
                 <img
-                  src="https://ka-barangay-io.vercel.app/src/assets/images/kabarangay_hero_1780140636347.png"
-                  alt="Ka Barangay Community Governance Platform"
+                  src={kaBarangayImg}
+                  alt=""
                   className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />
@@ -162,8 +169,8 @@ export default function PodcastHero({ onOpenBooking, onExploreServices }: Podcas
               {/* Card bottom: SpeakUp - Anti-Bullying Support */}
               <div className="relative group overflow-hidden rounded-2xl border border-[#141d2d] bg-gradient-to-br from-indigo-900 to-purple-950 h-[137px] transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:border-indigo-500/30">
                 <img
-                  src="https://images.unsplash.com/photo-1516627145497-ae3ddd112c38?q=80&w=600&auto=format&fit=crop"
-                  alt="SpeakUp Anti-Bullying Safety Platform"
+                  src={speakUpImg}
+                  alt=""
                   className="w-full h-full object-cover opacity-75 group-hover:scale-110 transition-transform duration-700 mix-blend-overlay"
                   referrerPolicy="no-referrer"
                 />
@@ -173,8 +180,8 @@ export default function PodcastHero({ onOpenBooking, onExploreServices }: Podcas
             {/* Card 5: Right showcase (Col span 2) */}
             <div className="col-span-2 relative group overflow-hidden rounded-2xl border border-white/5 bg-[#121217] h-[290px] self-end transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-[#FFAA2B]/30">
               <img
-                src="https://images.unsplash.com/photo-1516280440614-37939bbacd6a?q=80&w=600&auto=format&fit=crop"
-                alt="Product developer smiling"
+                src={productDevImg}
+                alt=""
                 className="w-full h-full object-cover opacity-85 group-hover:scale-110 transition-transform duration-700"
                 referrerPolicy="no-referrer"
               />
@@ -192,10 +199,7 @@ export default function PodcastHero({ onOpenBooking, onExploreServices }: Podcas
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-4 flex flex-col justify-end text-left">
-                <span className="text-[9px] uppercase tracking-widest text-[#FFAA2B] font-mono font-bold">Principal Advisor</span>
-                <h3 className="text-sm font-bold text-white">Neverland Collective</h3>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
             </div>
             {/* Slide 2 */}
             <div className="snap-center shrink-0 w-[240px] relative rounded-2xl border border-white/10 overflow-hidden bg-[#121217] h-[260px]">
@@ -205,10 +209,7 @@ export default function PodcastHero({ onOpenBooking, onExploreServices }: Podcas
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-4 flex flex-col justify-end text-left">
-                <span className="text-[9px] uppercase tracking-widest text-emerald-400 font-mono font-bold">Interactive Web</span>
-                <h3 className="text-sm font-bold text-white">Custom Scaled SDKs</h3>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
             </div>
             {/* Slide 3 */}
             <div className="snap-center shrink-0 w-[240px] relative rounded-2xl border border-white/10 overflow-hidden bg-[#121217] h-[260px]">
@@ -218,10 +219,7 @@ export default function PodcastHero({ onOpenBooking, onExploreServices }: Podcas
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-4 flex flex-col justify-end text-left">
-                <span className="text-[9px] uppercase tracking-widest text-indigo-400 font-mono font-bold">Brand Design</span>
-                <h3 className="text-sm font-bold text-white">Modern Aesthetic Systems</h3>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
             </div>
           </div>
           {/* Custom swipe indicator for mobile */}
