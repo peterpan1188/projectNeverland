@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { 
-  Sparkles, 
   Map, 
   Compass, 
   Users, 

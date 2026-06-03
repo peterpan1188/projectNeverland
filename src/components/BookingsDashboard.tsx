@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Booking } from '../types';
-import { Calendar, Clock, Trash2, Video, Sparkles, SlidersHorizontal, Layers, CheckCircle } from 'lucide-react';
+import { Calendar, Clock, Trash2, Video, SlidersHorizontal, Layers, CheckCircle } from 'lucide-react';
 
 interface BookingsDashboardProps {
   refreshTrigger: number;

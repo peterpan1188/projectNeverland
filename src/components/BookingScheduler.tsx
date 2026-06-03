@@ -8,7 +8,7 @@ import {
   User, 
   Mail, 
   Building, 
-  Sparkles, 
+  Ticket, 
   CheckCircle, 
   ArrowRight, 
   ArrowLeft, 
@@ -670,7 +670,7 @@ export default function BookingScheduler({ initialFocusTopic, onBookingCreated }
                         type="submit"
                         className="flex items-center gap-2 bg-brand-orange hover:bg-brand-orange-hover text-white px-6 py-3 rounded-xl text-xs font-semibold transition-all shadow-lg shadow-brand-orange/15 hover:shadow-brand-orange/30 active:scale-95"
                       >
-                        <Sparkles className="w-4 h-4" />
+                        <Ticket className="w-4 h-4" />
                         <span>Generate Secured Ticket</span>
                       </button>
                     </div>

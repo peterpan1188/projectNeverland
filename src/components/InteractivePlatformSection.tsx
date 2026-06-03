@@ -10,7 +10,8 @@ import {
   Mail, 
   Phone, 
   ChevronRight, 
-  Copy
+  Copy,
+  Briefcase
 } from 'lucide-react';
 import peterPhoto from '../assets/images/peterbuenavente-featured-1.png';
 
@@ -110,6 +111,64 @@ export default function InteractivePlatformSection() {
       highlights: [
         'Owned the front-end pipeline from design handoff to functional implementation, writing raw code templates matching corporate brand values.',
         'Led technical audits and design workarounds to completely modernize legacy dashboard architectures for desktop and mobile devices.'
+      ]
+    },
+    {
+      role: 'Web Designer & Web Developer',
+      company: 'EnfraUSA BusinessSolution',
+      period: 'February 2016 – October 2017',
+      focus: 'Internet Brands & Website Industry',
+      highlights: [
+        'Conducted website maintenance, editing details and content using proprietary CMS (iPortal and iControl, WordPress-inspired).',
+        'Provided high-tier client support as Senior Designer for VIP client tasks, ensuring design precision and timeliness.',
+        'Customized client websites, overriding backend constraints using raw code to implement advanced styling that exceeded CMS limitations.',
+        'Produced professional graphic designs and corporate brandings for international client websites.'
+      ]
+    },
+    {
+      role: 'Multimedia Designer',
+      company: 'Kelin Graphics System Corp.',
+      period: 'June 2014 – October 2015',
+      focus: 'Distributor of Large Format Printers & Advertising Machines',
+      highlights: [
+        'Appointed as UI Lead for brand revisions, managing website design, maintenance, and development.',
+        'Developed wireframes, mockups, and interactive prototypes using Photoshop, Illustrator, and other design applications.',
+        'Designed videos, GIFs, website banners, and marketing assets for official social media pages.',
+        'Implemented SEO best practices, optimizing metadata syntax to increase website rankings and driving traffic via targeted marketing links.'
+      ]
+    },
+    {
+      role: 'Multimedia Designer',
+      company: 'R.Y. Cortez Signs Services',
+      period: 'July 2013 – April 2014',
+      focus: 'Advertising Business (Signages)',
+      highlights: [
+        'Created detailed 3D signages and structural mockups for architectural visualization and client presentations.',
+        'Designed corporate logo studies, computed production layouts, printed pattern layouts, and assisted in fabrication processes.',
+        'Developed marketing expo booths and promotional collaterals including brochures, leaflets, posters, and tarpaulins.',
+        'Attended client design meetings to align specifications and finalize fabrication quotations.'
+      ]
+    },
+    {
+      role: 'Web Designer & Web Developer',
+      company: 'R.Y. Cortez Signs Services',
+      period: 'March 2013 – May 2013',
+      focus: 'Advertising Business (Signages)',
+      highlights: [
+        'Designed brand identity packages, product logo studies, and initial company advertisement concepts.',
+        'Created marketing graphics, social media banners, and office collateral designs (leaflets, brochures, and banners).'
+      ]
+    },
+    {
+      role: 'Visual Artist & Graphic Designer (Freelance)',
+      company: 'GMA7, Unli Merch, Toon City, Top Draw, Big and Small Art Co.',
+      period: '2008 – 2013',
+      focus: 'Media, Apparel, Animation & Fine Arts',
+      highlights: [
+        'Designed product logos, marketing brochures, leaflets, banners, posters, tarpaulins, and infographics for corporate clients.',
+        'Worked as a subcontract animator for Toon City Animation and Top Draw Animation, contributing to international cartoon productions.',
+        'Illustrated children\'s books and created print designs for apparel businesses (Unli Merch, Big and Small Art Co.).',
+        'Created fine art murals and set designs for GMA 7 Studio, and exhibited fine art paintings in galleries and public spaces.'
       ]
     }
   ];
@@ -231,7 +290,7 @@ export default function InteractivePlatformSection() {
               <div className="p-6 border-b border-zinc-850 bg-[#0E0E12] flex items-center justify-between sticky top-0 z-10 backdrop-blur-xl">
                 <div className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-lg bg-zinc-950/80 border border-zinc-800 flex items-center justify-center">
-                    <Sparkles className="w-4.5 h-4.5 text-brand-orange" />
+                    <Briefcase className="w-4.5 h-4.5 text-brand-orange" />
                   </div>
                   <div>
                     <h3 className="text-white font-display font-extrabold text-base">Professional Ledger</h3>
@@ -324,7 +383,7 @@ export default function InteractivePlatformSection() {
 
                           <div className="flex flex-wrap items-center justify-between gap-2.5 mb-1">
                             <span className="text-white text-base font-display font-extrabold">{item.role}</span>
-                            <span className="px-2.5 py-0.5 rounded-full border border-zinc-800 bg-zinc-950 text-brand-orange font-mono text-[9px] font-bold">
+                            <span className="px-2.5 py-0.5 rounded-full border border-zinc-800 bg-zinc-950 text-[#FFAA2B] font-mono text-[9px] font-bold">
                               {item.period}
                             </span>
                           </div>

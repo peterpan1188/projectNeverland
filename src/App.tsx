@@ -17,7 +17,6 @@ import InteractivePlatformSection from './components/InteractivePlatformSection'
 import BentoServicesSection from './components/BentoServicesSection';
 import ProjectNeverlandLogo from './components/ProjectNeverlandLogo';
 import { 
-  Sparkles, 
   ChevronDown, 
   ArrowUpRight, 
   Layers, 
@@ -61,6 +60,7 @@ export default function App() {
   // References for scrolling
   const portfolioRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
+  const offeringRef = useRef<HTMLDivElement>(null);
   const techStackRef = useRef<HTMLDivElement>(null);
   const faqRef = useRef<HTMLDivElement>(null);
 
@@ -239,7 +239,7 @@ export default function App() {
       {/* Replaced Carousel with high-fidelity Dribbble Podcast Hero */}
       <PodcastHero 
         onOpenBooking={handleOpenBookingDefault} 
-        onExploreServices={() => scrollToSection(servicesRef)} 
+        onExploreServices={() => scrollToSection(offeringRef)} 
       />
 
       {/* Slanted continuous services ticker tape ribbon as requested */}
@@ -253,7 +253,9 @@ export default function App() {
           <InteractivePlatformSection />
 
           {/* Capabilities & Star-Rating Platform Section displaying high fidelity mobile bento grid */}
-          <BentoServicesSection />
+          <div ref={offeringRef}>
+            <BentoServicesSection />
+          </div>
         </div>
       </section>
 

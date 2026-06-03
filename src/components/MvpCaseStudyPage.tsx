@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { 
   ArrowLeft, 
   ExternalLink, 
-  Sparkles, 
+  Tag, 
   Clock, 
   Target, 
   Cpu, 
@@ -501,7 +501,7 @@ export default function MvpCaseStudyPage({ project, onBack }: MvpCaseStudyPagePr
 
           <div className="absolute bottom-0 inset-x-0 p-6 sm:p-12 z-20 text-left">
             <div className="inline-flex items-center gap-1.5 bg-brand-orange/20 border border-brand-orange/30 px-3.5 py-1.5 rounded-full text-[10.5px] font-mono tracking-widest font-bold text-brand-orange uppercase mb-4 shadow">
-              <Sparkles className="w-3.5 h-3.5" />
+              <Tag className="w-3.5 h-3.5" />
               <span>{project.category}</span>
             </div>
             

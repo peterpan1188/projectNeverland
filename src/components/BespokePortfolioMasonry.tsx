@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   ArrowUpRight, 
-  Sparkles, 
   Layers,
   Globe,
   Compass,
@@ -39,7 +38,7 @@ export default function BespokePortfolioMasonry() {
       case 'letsspeakup': return <Vote className="w-5 h-5 text-indigo-500" />;
       case 'ikalinga': return <HeartPulse className="w-5 h-5 text-[#10B981]" />;
       case 'ka-barangay-io': return <Building2 className="w-5 h-5 text-teal-500" />;
-      default: return <Sparkles className="w-5 h-5 text-brand-orange" />;
+      default: return <Layers className="w-5 h-5 text-brand-orange" />;
     }
   };
 
@@ -59,7 +58,7 @@ export default function BespokePortfolioMasonry() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div className="text-left max-w-2xl">
             <div className="inline-flex items-center gap-1.5 bg-brand-orange/10 border border-brand-orange/20 px-3 py-1 rounded-full text-[10.5px] font-mono tracking-wider font-semibold text-brand-orange uppercase mb-4">
-              <Sparkles className="w-3 h-3" />
+              <Layers className="w-3 h-3" />
               <span>Phase 1 Functional MVPs</span>
             </div>
             <h2 className="text-4xl sm:text-5xl lg:text-5xl font-display font-extrabold tracking-tight text-white mb-4 leading-tight">
