@@ -16,13 +16,53 @@ import peterPhoto from '../assets/images/peterbuenavente-featured-1.png';
 
 export default function InteractivePlatformSection() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState<'experience' | 'skills' | 'contact'>('experience');
+  const [activeTab, setActiveTab] = useState<'experience' | 'skills' | 'achievements' | 'contact'>('experience');
   const [copiedText, setCopiedText] = useState<string | null>(null);
 
   const handleCopy = (text: string, type: string) => {
     navigator.clipboard.writeText(text);
     setCopiedText(type);
     setTimeout(() => setCopiedText(null), 2000);
+  };
+
+  const achievements = [
+    { year: '2024', status: 'HON. MENTION', title: 'DENR FMB Digital Poster Making Contest' },
+    { year: '2023', status: 'FINALIST', title: 'Philippine Art Award 2022-2023' },
+    { year: '2023', status: 'FINALIST', title: 'Legazy T-Shirt Design Contest' },
+    { year: '2019', status: 'FINALIST', title: 'Philippine Art Award 2019-2020' },
+    { year: '2018', status: 'HON. MENTION', title: 'LIS and National Library Poster Making Contest' },
+    { year: '2018', status: 'SEMI FINALIST', title: '2018 MADE (Metrobank Art and Design Excellence)' },
+    { year: '2018', status: 'FINALIST', title: 'Fierra De Manila T-Shirt Design Competition' },
+    { year: '2017', status: '2ND PRIZE', title: 'GHTCP - Anti Human Slavery Digital Poster Making Contest' },
+    { year: '2017', status: 'HON. MENTION', title: 'Inner Wheel of the Philippines Painting Competition' },
+    { year: '2017', status: 'FINALIST', title: 'Art Battle Manila (Fringe Manila)' },
+    { year: '2017', status: 'SEMI FINALIST', title: '2017 MADE (Metrobank Art and Design Excellence)' },
+    { year: '2017', status: 'GRAND PRIZE', title: 'Fierra De Manila T-Shirt Design Competition' },
+    { year: '2017', status: 'TOP10 FINALIST', title: '2nd Don Papa Rum Art Competition' },
+    { year: '2016', status: 'FINALIST', title: '2016 Maningning Miclat Art Award' },
+    { year: '2016', status: 'GRAND PRIZE', title: 'Fierra De Manila T-Shirt Design Competition' },
+    { year: '2015', status: 'HON. MENTION', title: '1st Iloilo Art Prize' },
+    { year: '2015', status: 'HON. MENTION', title: 'Philippine Navy Painting Competition' },
+    { year: '2015', status: 'TOP10 FINALIST', title: '2016 Int\'l Eucharist Painting Competition' },
+    { year: '2014', status: '2ND PRIZE', title: '2014 Maningning Miclat Art Award' },
+    { year: '2006', status: 'FINALIST', title: 'Painting Category - 39th Shell NSAC' },
+    { year: '2006', status: 'HON. MENTION', title: 'Museo Pambata Poster Making Contest' },
+    { year: '2005', status: 'REPRESENTATIVE', title: 'FEU Inter University Painting Competition' },
+    { year: '2004', status: 'HON. MENTION', title: 'Smart Communication - Poster Making Contest' },
+    { year: '2004', status: 'HON. MENTION', title: 'Bigkis Mag-aaral Poster Making Contest' }
+  ];
+
+  const getBadgeStyle = (status: string) => {
+    if (status.includes('GRAND') || status.includes('1ST') || status.includes('WINNER')) {
+      return 'bg-amber-500/10 text-amber-400 border-amber-500/30';
+    }
+    if (status.includes('2ND') || status.includes('3RD') || status.includes('PRIZE')) {
+      return 'bg-slate-400/10 text-slate-300 border-slate-400/30';
+    }
+    if (status.includes('FINALIST') || status.includes('SEMI')) {
+      return 'bg-brand-orange/10 text-brand-orange border-brand-orange/30';
+    }
+    return 'bg-zinc-500/10 text-zinc-400 border-zinc-800';
   };
 
   // Careers from pdf
@@ -208,11 +248,11 @@ export default function InteractivePlatformSection() {
               </div>
 
               {/* Tabs header selector */}
-              <div className="px-6 bg-[#0E0E12] border-b border-zinc-850 flex gap-4 select-none">
+              <div className="px-6 bg-[#0E0E12] border-b border-zinc-850 flex gap-4 select-none overflow-x-auto no-scrollbar">
                 <button
                   onClick={() => setActiveTab('experience')}
                   type="button"
-                  className={`py-3.5 text-xs font-mono font-bold tracking-wider uppercase relative ${
+                  className={`py-3.5 text-xs font-mono font-bold tracking-wider uppercase relative shrink-0 ${
                     activeTab === 'experience' ? 'text-brand-orange' : 'text-zinc-500 hover:text-zinc-300'
                   }`}
                 >
@@ -224,7 +264,7 @@ export default function InteractivePlatformSection() {
                 <button
                   onClick={() => setActiveTab('skills')}
                   type="button"
-                  className={`py-3.5 text-xs font-mono font-bold tracking-wider uppercase relative ${
+                  className={`py-3.5 text-xs font-mono font-bold tracking-wider uppercase relative shrink-0 ${
                     activeTab === 'skills' ? 'text-brand-orange' : 'text-zinc-500 hover:text-zinc-300'
                   }`}
                 >
@@ -234,9 +274,21 @@ export default function InteractivePlatformSection() {
                   )}
                 </button>
                 <button
+                  onClick={() => setActiveTab('achievements')}
+                  type="button"
+                  className={`py-3.5 text-xs font-mono font-bold tracking-wider uppercase relative shrink-0 ${
+                    activeTab === 'achievements' ? 'text-brand-orange' : 'text-zinc-500 hover:text-zinc-300'
+                  }`}
+                >
+                  Achievements
+                  {activeTab === 'achievements' && (
+                    <motion.div layoutId="activeTabUnderline" className="absolute bottom-0 inset-x-0 h-0.5 bg-brand-orange" />
+                  )}
+                </button>
+                <button
                   onClick={() => setActiveTab('contact')}
                   type="button"
-                  className={`py-3.5 text-xs font-mono font-bold tracking-wider uppercase relative ${
+                  className={`py-3.5 text-xs font-mono font-bold tracking-wider uppercase relative shrink-0 ${
                     activeTab === 'contact' ? 'text-brand-orange' : 'text-zinc-500 hover:text-zinc-300'
                   }`}
                 >
@@ -248,7 +300,7 @@ export default function InteractivePlatformSection() {
               </div>
 
               {/* Body inside drawer */}
-              <div className="p-6 flex-1 bg-[#0A0A0E]">
+              <div className="p-6 flex-1 bg-[#0A0A0E] overflow-y-auto">
                 
                 {activeTab === 'experience' && (
                   <div className="space-y-8 text-left">
@@ -326,6 +378,31 @@ export default function InteractivePlatformSection() {
                               </div>
                             ))}
                           </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {activeTab === 'achievements' && (
+                  <div className="space-y-6 text-left">
+                    <p className="text-zinc-400 text-xs sm:text-sm font-sans font-light leading-relaxed mb-4">
+                      An overview of Peter's creative awards, painting exhibitions, and national poster/design competitions spanning his career.
+                    </p>
+
+                    <div className="space-y-2.5 max-h-[62vh] overflow-y-auto pr-2 custom-scrollbar">
+                      {achievements.map((item, idx) => (
+                        <div 
+                          key={idx} 
+                          className="flex flex-col sm:flex-row sm:items-center justify-between p-3.5 rounded-xl bg-zinc-950 border border-zinc-900/80 hover:border-zinc-800 transition-all gap-2"
+                        >
+                          <div className="flex items-start sm:items-center gap-3">
+                            <span className="text-brand-orange font-mono text-xs font-bold shrink-0 mt-0.5 sm:mt-0">{item.year}</span>
+                            <span className="text-white text-xs sm:text-sm font-sans font-light leading-normal">{item.title}</span>
+                          </div>
+                          <span className={`px-2 py-0.5 rounded text-[9px] font-mono font-bold border shrink-0 text-center w-max ${getBadgeStyle(item.status)}`}>
+                            {item.status}
+                          </span>
                         </div>
                       ))}
                     </div>

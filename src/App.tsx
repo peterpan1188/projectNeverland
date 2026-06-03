@@ -40,6 +40,18 @@ import {
   Link
 } from 'lucide-react';
 
+const BehanceIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M22 13h-4c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5zm-14-1.5H6v2h2c.55 0 1-.45 1-1s-.45-1-1-1zm0-3H6v2h2c.55 0 1-.45 1-1s-.45-1-1-1zm14.5.5H18c-.28 0-.5.22-.5.5s.22.5.5.5h4.5c.28 0 .5-.22.5-.5s-.22-.5-.5-.5zM24 12c0 6.63-5.37 12-12 12S0 18.63 0 12 5.37 0 12 0s12 5.37 12 12zm-12.75 3.3c.75-.41 1.25-1.2 1.25-2.1 0-.91-.53-1.68-1.3-2.02.58-.39.95-1.05.95-1.78 0-1.38-1.12-2.5-2.5-2.5H4v11h5.5c1.33 0 2.44-.92 2.75-2.1zm8.25-1.8H15.6c.11.9.83 1.6 1.7 1.6.59 0 1.13-.32 1.41-.83.15-.24.46-.32.71-.18.25.14.33.46.19.71-.48.87-1.42 1.45-2.51 1.45-1.79 0-3.21-1.45-3.21-3.25S15.31 9 17.1 9c1.72 0 3.1 1.35 3.18 3.03.01.26-.19.47-.48.47z"/>
+  </svg>
+);
+
+const LinktreeIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="m13.51 5.85 4.01-4.12 2.32 2.38-4.21 4.01h5.91v3.31h-5.94l4.23 4.11-2.32 2.33-5.75-5.77-5.74 5.77-2.32-2.33 4.23-4.11H1.5v-3.31h5.92L3.21 4.11 5.53 1.73l4.01 4.12V0h3.97v5.85zM10.02 16.16h3.97V24h-3.97v-7.84z"/>
+  </svg>
+);
+
 export default function App() {
   const [focusTopic, setFocusTopic] = useState<string>('');
   const [refreshTrigger, setRefreshTrigger] = useState<number>(0);
@@ -47,8 +59,9 @@ export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
   // References for scrolling
-  const bookingRef = useRef<HTMLDivElement>(null);
+  const portfolioRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
+  const techStackRef = useRef<HTMLDivElement>(null);
   const faqRef = useRef<HTMLDivElement>(null);
 
   const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
@@ -60,7 +73,7 @@ export default function App() {
 
   const handleSelectProjectToConsult = (topic: string) => {
     setFocusTopic(topic);
-    scrollToSection(bookingRef);
+    scrollToSection(portfolioRef);
   };
 
   const handleOpenBookingDefault = () => {
@@ -88,11 +101,18 @@ export default function App() {
           
           {/* Logo Brand exactly configured */}
           <div className="flex items-center">
-            <ProjectNeverlandLogo className="h-10 sm:h-12 w-auto" iconOnly />
+            <ProjectNeverlandLogo className="h-7 sm:h-8.5 w-auto" iconOnly />
           </div>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
+            <button 
+              type="button" 
+              onClick={() => scrollToSection(portfolioRef)}
+              className="text-xs font-semibold text-gray-400 hover:text-white uppercase tracking-wider transition-colors"
+            >
+              Featured Works
+            </button>
             <button 
               type="button" 
               onClick={() => scrollToSection(servicesRef)}
@@ -102,30 +122,39 @@ export default function App() {
             </button>
             <button 
               type="button" 
+              onClick={() => scrollToSection(techStackRef)}
+              className="text-xs font-semibold text-gray-400 hover:text-white uppercase tracking-wider transition-colors"
+            >
+              Tech Stack
+            </button>
+            <button 
+              type="button" 
               onClick={() => scrollToSection(faqRef)}
               className="text-xs font-semibold text-gray-400 hover:text-white uppercase tracking-wider transition-colors"
             >
               Advisory FAQ
             </button>
-            <button 
-              type="button" 
-              onClick={() => scrollToSection(bookingRef)}
-              className="text-xs font-semibold text-gray-400 hover:text-white uppercase tracking-wider transition-colors"
-            >
-              Consulting Center
-            </button>
           </nav>
 
-          {/* Consultation CTA Header */}
-          <div className="hidden md:flex items-center gap-4">
+          {/* Consultation CTA Header replaced with Behance and Linktree */}
+          <div className="hidden md:flex items-center gap-3">
             <a 
-              href="https://wa.me/639104011905"
+              href="https://www.behance.net/panbuenavente"
               target="_blank"
               rel="noopener noreferrer"
-              id="nav_book_button"
-              className="bg-brand-orange hover:bg-brand-orange-hover text-white text-xs font-bold px-5 py-2.5 rounded-xl block text-center transition-all hover:shadow-lg hover:shadow-brand-orange/15 shadow-md active:scale-95"
+              title="Behance"
+              className="w-9 h-9 rounded-full bg-zinc-950 border border-neutral-border/45 hover:border-brand-orange/60 flex items-center justify-center text-zinc-400 hover:text-brand-orange transition-all duration-300"
             >
-              Initiate Strategy Session
+              <BehanceIcon className="w-4.5 h-4.5" />
+            </a>
+            <a 
+              href="https://linktr.ee/panbuenavente"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Linktree"
+              className="w-9 h-9 rounded-full bg-zinc-950 border border-neutral-border/45 hover:border-brand-orange/60 flex items-center justify-center text-zinc-400 hover:text-brand-orange transition-all duration-300"
+            >
+              <LinktreeIcon className="w-4.5 h-4.5" />
             </a>
           </div>
 
@@ -151,10 +180,24 @@ export default function App() {
             >
               <button 
                 type="button" 
+                onClick={() => scrollToSection(portfolioRef)}
+                className="block text-left w-full text-sm font-semibold text-gray-400 hover:text-white transition-colors py-1"
+              >
+                Featured Works
+              </button>
+              <button 
+                type="button" 
                 onClick={() => scrollToSection(servicesRef)}
                 className="block text-left w-full text-sm font-semibold text-gray-400 hover:text-white transition-colors py-1"
               >
                 Services
+              </button>
+              <button 
+                type="button" 
+                onClick={() => scrollToSection(techStackRef)}
+                className="block text-left w-full text-sm font-semibold text-gray-400 hover:text-white transition-colors py-1"
+              >
+                Tech Stack
               </button>
               <button 
                 type="button" 
@@ -163,22 +206,28 @@ export default function App() {
               >
                 Advisory FAQ
               </button>
-              <button 
-                type="button" 
-                onClick={() => scrollToSection(bookingRef)}
-                className="block text-left w-full text-sm font-semibold text-gray-400 hover:text-white transition-colors py-1"
-              >
-                Consulting Center
-              </button>
-              <a 
-                href="https://wa.me/639104011905"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center bg-brand-orange hover:bg-brand-orange-hover text-white text-xs font-bold py-3 rounded-xl block transition-all"
-              >
-                Initiate Strategy Session
-              </a>
+              <div className="flex items-center gap-3 pt-2">
+                <a 
+                  href="https://www.behance.net/panbuenavente"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex-1 py-3 rounded-xl bg-zinc-950 border border-neutral-border flex items-center justify-center text-zinc-400 hover:text-brand-orange transition-colors"
+                >
+                  <BehanceIcon className="w-5 h-5 mr-2" />
+                  <span className="text-xs font-bold">Behance</span>
+                </a>
+                <a 
+                  href="https://linktr.ee/panbuenavente"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex-1 py-3 rounded-xl bg-zinc-950 border border-neutral-border flex items-center justify-center text-zinc-400 hover:text-brand-orange transition-colors"
+                >
+                  <LinktreeIcon className="w-5 h-5 mr-2" />
+                  <span className="text-xs font-bold">Linktree</span>
+                </a>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
@@ -209,12 +258,14 @@ export default function App() {
       </section>
 
       {/* Creative Showcase Grid replacing automated scheduling session as requested */}
-      <div ref={bookingRef}>
+      <div ref={techStackRef}>
         <CreativeShowcaseGrid />
       </div>
 
       {/* Bespoke Gallery masonry section styled in a modern and trendy style */}
-      <BespokePortfolioMasonry />
+      <div ref={portfolioRef}>
+        <BespokePortfolioMasonry />
+      </div>
 
       {/* Advisory FAQ list (Accordion structured) */}
       <section className="py-24 px-4 bg-neutral-dark border-t border-neutral-border" ref={faqRef}>
@@ -278,7 +329,7 @@ export default function App() {
           
           <div className="space-y-4">
             <div className="flex items-center justify-center md:justify-start">
-              <ProjectNeverlandLogo className="h-10 sm:h-12 w-auto" iconOnly />
+              <ProjectNeverlandLogo className="h-7 sm:h-8.5 w-auto" iconOnly />
             </div>
             <p className="text-zinc-500 text-xs font-light max-w-sm">
               Premium Digital Advisory &amp; Software Production Hub. Building robust custom platforms, web applications, integrations, and marketing assets for modern ventures.
@@ -287,9 +338,10 @@ export default function App() {
 
           {/* Quick links to scroll */}
           <div className="flex justify-center gap-6 text-xs text-zinc-500">
+            <button type="button" onClick={() => scrollToSection(portfolioRef)} className="hover:text-brand-orange transition-colors">Featured Works</button>
             <button type="button" onClick={() => scrollToSection(servicesRef)} className="hover:text-brand-orange transition-colors">Services</button>
+            <button type="button" onClick={() => scrollToSection(techStackRef)} className="hover:text-brand-orange transition-colors">Tech Stack</button>
             <button type="button" onClick={() => scrollToSection(faqRef)} className="hover:text-brand-orange transition-colors">FAQs</button>
-            <button type="button" onClick={() => scrollToSection(bookingRef)} className="hover:text-brand-orange transition-colors">Booking Engine</button>
           </div>
 
           <div className="space-y-2 md:text-right">
@@ -317,13 +369,22 @@ export default function App() {
                 <Phone className="w-4 h-4" />
               </a>
               <a
+                href="https://www.behance.net/panbuenavente"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Behance"
+                className="w-8 h-8 rounded-full bg-zinc-950 border border-neutral-border/45 hover:border-brand-orange/60 flex items-center justify-center text-zinc-400 hover:text-brand-orange transition-all duration-300"
+              >
+                <BehanceIcon className="w-4.5 h-4.5" />
+              </a>
+              <a
                 href="https://linktr.ee/panbuenavente"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Linktree"
                 className="w-8 h-8 rounded-full bg-zinc-950 border border-neutral-border/45 hover:border-brand-orange/60 flex items-center justify-center text-zinc-400 hover:text-brand-orange transition-all duration-300"
               >
-                <Link className="w-4 h-4" />
+                <LinktreeIcon className="w-4 h-4" />
               </a>
               <a
                 href="https://www.facebook.com/pan.buenavente/"

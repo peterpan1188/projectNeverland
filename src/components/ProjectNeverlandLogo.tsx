@@ -8,7 +8,7 @@ interface ProjectNeverlandLogoProps {
 }
 
 export default function ProjectNeverlandLogo({
-  className = "h-10 sm:h-12 w-auto",
+  className = "h-7 sm:h-8.5 w-auto",
   iconOnly = false
 }: ProjectNeverlandLogoProps) {
   // Utilizing the uploaded PNG asset directly for the logo image
