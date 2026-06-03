@@ -198,7 +198,7 @@ export default function CreativeShowcaseGrid() {
   ];
 
   return (
-    <section className="relative bg-[#070709] py-32 px-4 overflow-hidden border-t border-b border-zinc-900 select-none">
+    <section className="relative bg-[#070709] py-16 sm:py-20 px-4 overflow-hidden border-t border-b border-zinc-900 select-none">
       
       {/* Visual Ambient Overlay Mesh Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#0F0F12_1px,transparent_1px),linear-gradient(to_bottom,#0F0F12_1px,transparent_1px)] bg-[size:32px_32px] opacity-75 pointer-events-none" />
@@ -242,7 +242,7 @@ export default function CreativeShowcaseGrid() {
       </div>
 
       {/* CENTRAL STATEMENT CONTAINER */}
-      <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center justify-center min-h-[360px] sm:min-h-[420px] px-4">
+      <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center justify-center min-h-[180px] sm:min-h-[220px] px-4">
         
         {/* Massive Bold Eye-catching Statement with Stark Swiss Typography exactly replicating mockup */}
         <motion.h1 

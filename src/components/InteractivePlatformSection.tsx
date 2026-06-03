@@ -26,6 +26,8 @@ export default function InteractivePlatformSection() {
   };
 
   const achievements = [
+    { year: '2025', status: 'HON. MENTION', title: '2nd Ersao Digital Art Contest' },
+    { year: '2025', status: 'HON. MENTION', title: 'Brooks Point Digital Art Competition' },
     { year: '2024', status: 'HON. MENTION', title: 'DENR FMB Digital Poster Making Contest' },
     { year: '2023', status: 'FINALIST', title: 'Philippine Art Award 2022-2023' },
     { year: '2023', status: 'FINALIST', title: 'Legazy T-Shirt Design Contest' },
@@ -161,7 +163,7 @@ export default function InteractivePlatformSection() {
           
           {/* Main heading */}
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold tracking-tight text-white mb-6 leading-[1.12]">
-            Meet Peter, our Project Lead, Senior Dev and Design Lead
+            Meet Peter
           </h2>
 
           {/* Engaging narrative description with absolute typography precision */}
