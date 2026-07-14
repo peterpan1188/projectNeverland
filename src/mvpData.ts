@@ -89,7 +89,7 @@ export const mvpProjects: MvpProject[] = [
     category: 'Anti-Bullying & Student Support Platform',
     shortDescription: 'SpeakUp is a student-focused anti-bullying platform designed to provide a safe and accessible environment where students can report bullying incidents, seek emotional support, and encourage healthy communication between schools, parents, and students.',
     imageUrl: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&h=800&q=80',
-    liveUrl: 'https://speakup.vercel.app',
+    liveUrl: 'https://letsspeakup.vercel.app',
     metrics: 'Active Student Security Nodes',
     scope: 'Anonymous Reporting, Counseling Help Request, Real-time Alerts, School Case Manager Board.',
     
